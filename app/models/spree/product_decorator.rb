@@ -1,6 +1,6 @@
 module Spree
   Product.class_eval do
-    scope :google_base_scope, -> { where(show_price: true).active.includes(:taxons) }
+    scope :google_base_scope, -> { where(google_base: true).active.includes(:taxons) }
 
     def google_base_title
       name.truncate(70)
